@@ -14,14 +14,12 @@ class Contact extends Component {
   onSubmit = updatedValue => {
     this.setState({
       fields: {
-        ...this.state.fields,
-        ...updatedValue
+        ...this.state.fields, //valeur initale
+        ...updatedValue //valeur mise à jour
       }
-
     });
   }
 
-  onSubmit = fields => this.setState({fields})
 
   render () {
     return (

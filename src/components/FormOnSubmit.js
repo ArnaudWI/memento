@@ -19,8 +19,9 @@ class FormOnSubmit extends React.Component {
 
 
 handleSubmit = (e) => {
-  e.preventDefault();
-  this.props.onSubmit(this.state);
+  e.preventDefault(); //pour ne pas faire apparaitre la data sur l'url
+  this.props.onSubmit(this.state); //on envoie la data en props pour la réception sur le composant parent
+ // on réinitialise la data une fois les states envoyés
   this.setState({
     firstName: '',
     lastName: '',

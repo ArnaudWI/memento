@@ -26,7 +26,8 @@ class FormOnChange extends React.Component {
 
   handleSubmit = e => {
     console.log('submit' , this.state)
-    e.preventDefault()
+    e.preventDefault() //pour ne pas faire apparaitre la data sur l'url
+    // réinitialise les states pour refaire apparaitre le placeholder
     this.setState({
       firstName: '',
       lastName: '',
@@ -34,6 +35,7 @@ class FormOnChange extends React.Component {
       email: '',
       password: ''
     })
+    //on réinitialise la data envoyée au parent
     this.props.onChange({
       firstName: '',
       lastName: '',
