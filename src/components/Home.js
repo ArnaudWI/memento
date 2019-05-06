@@ -2,16 +2,23 @@ import React, { Component } from 'react';
 import {
   Container,
   Row,
-  Col
+  Col,
+  Button
  } from 'reactstrap';
 
 class Home extends Component {
+
+  handleSubmit = () => {
+    this.props.history.push('/about')
+  }
+
   render () {
     return (
       <Container>
        <Row>
          <Col>
-          <p>Home</p>
+          <Button onClick={this.handleSubmit} color="primary">About</Button>
+          <Button onClick={() => this.props.history.push('/contact')} color="primary">Contact</Button>
          </Col>
        </Row>
       </Container>
